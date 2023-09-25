@@ -4,8 +4,8 @@ import asyncio
 
 from aiogram import Bot, Dispatcher, executor, types
 
-TOKEN = "здесьбудетваштокенот@BotFather"
-MSG = "Программировал ли ты сегодня, {}?"
+TOKEN = "token_from@BotFather"
+MSG = "Hast du heute Program machen, {}?"
 
 logging.basicConfig(level=logging.INFO)
 
@@ -18,7 +18,7 @@ async def start_handler(message: types.Message):
     user_name = message.from_user.first_name
     user_full_name = message.from_user.full_name
     logging.info(f'{user_id} {user_full_name} {time.asctime()}')
-    await message.reply(f"Привет, {user_full_name}!")
+    await message.reply(f"Hallo, {user_full_name}!")
     
     for i in range(7):
         await asyncio.sleep(60*60*24)
